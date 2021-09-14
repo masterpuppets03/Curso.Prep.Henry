@@ -5,7 +5,8 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-if (x > y) {
+  
+  if (x > y) {
   return x;
 } else if (y > x) {
   return y;
@@ -159,8 +160,13 @@ function operadoresLogicos(num1, num2, num3) {
   return "Número 1 es mayor y positivo";
   } else if (num3 > num2 && num3 > 1){
   return num3 + 1;
-}
-else return false;
+  } else if (num1 < 0 || num2 < 0 || num3 < 0){
+    return "Hay negativos";
+  } else if (num1 > num2 && num1 > num2 && num1 > num3){
+    return "Número 1 es mayor y positivo";
+  } else if (num3 > num1 && num3 > num2){
+    return num3 + 1;
+  } return false;
 } 
 operadoresLogicos(20, 5, -6)
 
@@ -186,7 +192,7 @@ for (let i = 2; i < numero; i++){
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
-  //si su valor es true y “Soy falso” si su valor es false.
+  //si su valor es true y “ ” si su valor es false.
   //Escribe tu código aquí
 if (valor === true){
   return "Soy verdadero";
